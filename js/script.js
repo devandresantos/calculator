@@ -161,12 +161,34 @@ class Calculator {
 
     start = event => {
 
-        if (event.target.closest('[data-btn-value]') === null) return;
+        let input;
+
+        if(event.code === undefined) {
+            if (event.target.closest('[data-btn-value]') === null) return;
+            
+            input = event.target.closest('[data-btn-value]').dataset.btnValue || event.target.dataset.btnValue;
+            event.target.closest('button').blur();
+        } else {
+            const keys = ['%', 'Delete', 'Backspace', 'Enter', ',', '/', '+', '-', '*', '=', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            
+            if(!keys.includes(event.key)) return;
+
+            switch(event.key) {
+                case 'Enter':
+                    input = '=';
+                    break;
+                case ',':
+                    input = '.';
+                    break;
+                default:
+                    input = event.key;
+                    break;
+            }
+        }
         
         const opetators = ['/', '*', '-', '+'];
-        const input = event.target.closest('[data-btn-value]').dataset.btnValue || event.target.dataset.btnValue;
     
-        if (input == 'AC') {
+        if (input == 'Delete') {
             this.cleanAll();
             return;
         }
@@ -176,7 +198,7 @@ class Calculator {
             return;
         }
     
-        if (input == '<-') {
+        if (input == 'Backspace') {
             this.backspace();
             return;
         }
@@ -277,3 +299,4 @@ const result = document.querySelector('.result');
 const calculator = new Calculator(lastOperation, result);
 
 document.querySelector('.buttons').addEventListener('click', calculator.start);
+document.body.addEventListener('keyup', calculator.start);
