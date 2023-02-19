@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <main id="calculator">
+        <div class="visor">
+            <div class="last-operation"></div>
+            <div class="result">0</div>
+        </div>
+        <div class="buttons">
+            <div class="calculator-row">
+                <button data-btn-value="AC" class="btn-AC">
+                    <img src="imgs/btn-AC.svg">
+                </button>
+                <button data-btn-value="%" class="btn-percent">
+                    <img src="imgs/btn-percent.svg">
+                </button>
+                <button data-btn-value="<-" class="btn-backspace">
+                    <img src="imgs/btn-backspace.svg">
+                </button>
+                <button data-btn-value="/" class="btn-operator">
+                    <img src="imgs/btn-operator-divide.svg">
+                </button>
+            </div>
+
+            <div class="calculator-row">
+                <button data-btn-value="7" class="btn-number">
+                    <img src="imgs/btn-number-7.svg">
+                </button>
+                <button data-btn-value="8" class="btn-number">
+                    <img src="imgs/btn-number-8.svg">
+                </button>
+                <button data-btn-value="9" class="btn-number">
+                    <img src="imgs/btn-number-9.svg">
+                </button>
+                <button data-btn-value="*" class="btn-operator">
+                    <img src="imgs/btn-operator-multiply.svg">
+                </button>
+            </div>
+
+            <div class="calculator-row">
+                <button data-btn-value="4" class="btn-number">
+                    <img src="imgs/btn-number-4.svg">
+                </button>
+                <button data-btn-value="5" class="btn-number">
+                    <img src="imgs/btn-number-5.svg">
+                </button>
+                <button data-btn-value="6" class="btn-number">
+                    <img src="imgs/btn-number-6.svg">
+                </button>
+                <button data-btn-value="-" class="btn-operator">
+                    <img src="imgs/btn-operator-minus.svg">
+                </button>
+            </div>
+
+            <div class="calculator-row">
+                <button data-btn-value="1" class="btn-number">
+                    <img src="imgs/btn-number-1.svg">
+                </button>
+                <button data-btn-value="2" class="btn-number">
+                    <img src="imgs/btn-number-2.svg">
+                </button>
+                <button data-btn-value="3" class="btn-number">
+                    <img src="imgs/btn-number-3.svg">
+                </button>
+                <button data-btn-value="+" class="btn-operator">
+                    <img src="imgs/btn-operator-plus.svg">
+                </button>
+            </div>
+
+            <div class="calculator-row">
+                <button data-btn-value="+/-" class="btn-exchange-signal">
+                    <img src="imgs/btn-exchange-signal.svg">
+                </button>
+                <button data-btn-value="0" class="btn-number">
+                    <img src="imgs/btn-number-0.svg">
+                </button>
+                <button data-btn-value="." class="btn-dot">
+                    <img src="imgs/btn-dot.svg">
+                </button>
+                <button data-btn-value="=" class="btn-equal">
+                    <img src="imgs/btn-equal.svg">
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
